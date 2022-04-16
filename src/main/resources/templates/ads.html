@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Ads view</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+<div align="center" style="margin-top: 1%">
+    <h1>Ads List</h1>
+    <a href="/newAds">Create New Ads</a>
+    <br/><br/>
+    <a href="/">Campaign list</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Ads Id</th>
+            <th>Ads name</th>
+            <th>Ads message</th>
+            <th>Campaign Id</th>
+            <th>Actions</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ads : ${adsList}">
+            <td th:text="${ads.id}">id</td>
+            <td th:text="${ads.name}">name</td>
+            <td th:text="${ads.message}">message</td>
+            <td th:text="${ads.campaign.id}">campaign_id</td>
+            <td>
+                <a th:href="@{'/editAds/' + ${ads.id}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/deleteAds/' + ${ads.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

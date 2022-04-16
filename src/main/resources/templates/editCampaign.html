@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Campaign</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit Campaign</h1>
+    <br />
+    <form action="#" th:action="@{/saveCampaign}" th:object="${campaign}" method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Campaign Id:</td>
+                <td>
+                    <input type="text" th:field="*{id}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Campaign Name:</td>
+                <td>
+                    <input type="text" th:field="*{name}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Employees number:</td>
+                <td><input type="number" th:field="*{employees}" /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" th:field="*{email}" /></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="number" step="0.1" th:field="*{price}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

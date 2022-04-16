@@ -1,0 +1,6 @@
+ALTER TABLE ads
+ADD CONSTRAINT FK_CampaignId
+  FOREIGN KEY (campaign_id)
+  REFERENCES campaign (id)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;

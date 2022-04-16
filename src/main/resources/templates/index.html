@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Campaign view</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+<div align="center" style="margin-top: 1%">
+    <h1>Campaigns List</h1>
+    <br/>
+    <a href="/newCampaign">Create New Campaign</a>
+    <br/><br/>
+    <a href="/showAdsList">Ads list</a>
+    <br/><br/>
+    <a href="/showAdsCampaignDTOList">Ads and Campaign list(DTO)</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Campaign Id</th>
+            <th>Name</th>
+            <th>Employees number</th>
+            <th>Email</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="campaign : ${campaignList}">
+            <td th:text="${campaign.id}">id</td>
+            <td th:text="${campaign.name}">name</td>
+            <td th:text="${campaign.employees}">employees</td>
+            <td th:text="${campaign.email}">email</td>
+            <td th:text="${campaign.price}">price</td>
+            <td>
+                <a th:href="@{'/editCampaign/' + ${campaign.id}}">Edit</a>
+                &nbsp;&nbsp;&nbsp;
+                <a th:href="@{'/deleteCampaign/' + ${campaign.id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Ads and Campaigns view</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+<body>
+
+<div align="center" style="margin-top: 1%">
+    <h1>Ads-Campaign List (DTO)</h1>
+    <br/>
+    <a href="/">Home</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Ads name</th>
+            <th>Ads message</th>
+            <th>Campaign id</th>
+            <th>Campaign name</th>
+            <th>Campaign employees number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="adsCampaignDTOList : ${adsCampaignDTOList}">
+            <td th:text="${adsCampaignDTOList.adsName}">Ads name</td>
+            <td th:text="${adsCampaignDTOList.adsMessage}">Ads message</td>
+            <td th:text="${adsCampaignDTOList.campaignId}">Campaign id</td>
+            <td th:text="${adsCampaignDTOList.campaignName}">Campaign name</td>
+            <td th:text="${adsCampaignDTOList.campaignEmployees}">Campaign employees number</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
