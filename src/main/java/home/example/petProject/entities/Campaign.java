@@ -19,7 +19,6 @@ public class Campaign {
     private String email;
     private float price;
     @OneToMany(mappedBy = "campaign")
-    //cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ads> ads;
 
 }

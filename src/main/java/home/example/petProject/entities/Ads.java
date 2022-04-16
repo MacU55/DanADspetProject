@@ -15,8 +15,6 @@ public class Ads {
     private Long id;
     private String name;
     private String message;
-
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "campaign_id", referencedColumnName="id")
     //@OnDelete(action = OnDeleteAction.CASCADE)

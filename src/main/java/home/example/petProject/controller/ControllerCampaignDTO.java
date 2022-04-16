@@ -22,17 +22,14 @@ public class ControllerCampaignDTO {
 
     private MapperStruct mapperStruct;
     private CampaignService campaignService;
-//    private CampaignRepo campaignRepo;
 
     @Autowired
     public ControllerCampaignDTO(
             MapperStruct mapperStruct,
-            CampaignService campaignService,
-            CampaignRepo campaignRepo
+            CampaignService campaignService
     ) {
         this.mapperStruct = mapperStruct;
         this.campaignService = campaignService;
-//        this.campaignRepo = campaignRepo;
     }
 
     @GetMapping("/idFull/{id}")

@@ -19,7 +19,6 @@ import java.util.List;
 public class ControllerAdsDTO {
 
     private MapperStruct mapperStruct;
-//    private AdsRepo adsRepo;
     private AdsService adsService;
 
 
@@ -29,7 +28,6 @@ public class ControllerAdsDTO {
                             AdsRepo adsRepo) {
         this.mapperStruct = mapperStruct;
         this.adsService = adsService;
-//        this.adsRepo = adsRepo;
     }
 
     @GetMapping("/{id}")
