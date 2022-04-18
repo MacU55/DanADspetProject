@@ -1,12 +1,12 @@
 package home.example.petProject.entities;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "ads")
 public class Ads {
@@ -17,7 +17,6 @@ public class Ads {
     private String message;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "campaign_id", referencedColumnName="id")
-    //@OnDelete(action = OnDeleteAction.CASCADE)
     private Campaign campaign;
 
 }

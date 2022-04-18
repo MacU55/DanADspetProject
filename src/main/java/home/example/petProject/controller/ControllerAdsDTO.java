@@ -32,17 +32,16 @@ public class ControllerAdsDTO {
 
     @GetMapping("/{id}")
     public ResponseEntity<AdsDTO> getAdsDTOById( @PathVariable("id") Long id) {
-        return new ResponseEntity<>(mapperStruct.
-                adsToAdsDTO(adsService.getAds(id)), HttpStatus.OK);
+        return new ResponseEntity<>(mapperStruct.adsToAdsDTO(adsService.getAds(id)), HttpStatus.OK);
     }
 
     @GetMapping("/allAds")
     public ResponseEntity <List<AdsDTO>> getListAdsDTO(){
-        return new ResponseEntity<>(
-                mapperStruct.adsToAdsDTOList(
-                        adsService.getAdsList()
-                ),
+        return new ResponseEntity<>(mapperStruct.adsToAdsDTOList(adsService.getAdsList()                ),
                 HttpStatus.OK
         );
     }
+
+
+
 }

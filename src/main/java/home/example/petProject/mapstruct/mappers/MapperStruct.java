@@ -14,15 +14,8 @@ import java.util.List;
 public interface MapperStruct {
 
     AdsDTO adsToAdsDTO(Ads ads);
-//    Ads convertAdsDTOToAds (AdsDTO adsDTO);
     CampaignFullDTO campaignToCampaignFullDTO(Campaign campaign);
-//    Campaign convertCampaignFullDTOCampaign (CampaignFullDTO campaignFullDTO);
     CampaignSlimDTO campaignToCampaignSlimDTO(Campaign campaign);
-//    Campaign convertCampaignSlimDTOToCampaign (CampaignSlimDTO campaignSlimDTO);
-
-   //
-
-
 
     List<CampaignFullDTO> campaignsToCampaignsFullDTOs(
             List<Campaign> campaigns

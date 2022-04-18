@@ -1,13 +1,13 @@
 package home.example.petProject.entities;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "campaign")
 public class Campaign {
@@ -21,4 +21,13 @@ public class Campaign {
     @OneToMany(mappedBy = "campaign")
     private List<Ads> ads;
 
+    public Campaign(){}
+
+    public Campaign(Long id, String name, int employees, String email, float price) {
+        this.id = id;
+        this.name = name;
+        this.employees = employees;
+        this.email = email;
+        this.price = price;
+    }
 }

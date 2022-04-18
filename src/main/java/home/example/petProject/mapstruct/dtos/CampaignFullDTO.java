@@ -2,14 +2,14 @@ package home.example.petProject.mapstruct.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import home.example.petProject.entities.Ads;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 import java.util.Set;
 
-@Getter
-@Setter
+@Data
 public class CampaignFullDTO {
 
     @JsonProperty("id")
