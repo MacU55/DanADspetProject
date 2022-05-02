@@ -1,5 +1,6 @@
 package home.example.petProject.controller;
 
+import home.example.petProject.entities.Ads;
 import home.example.petProject.mapstruct.dtos.AdsDTO;
 import home.example.petProject.mapstruct.mappers.MapperStruct;
 import home.example.petProject.repo.AdsRepo;
@@ -41,6 +42,14 @@ public class ControllerAdsDTO {
                 HttpStatus.OK
         );
     }
+
+//    @GetMapping("getAdsByAdsDTO")
+//    public ResponseEntity<Ads> getAdsByAdsDto(AdsDTO adsDTO){
+//
+//
+//
+//    }
+
 
 
 

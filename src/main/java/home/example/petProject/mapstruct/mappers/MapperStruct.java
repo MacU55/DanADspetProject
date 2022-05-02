@@ -17,17 +17,13 @@ public interface MapperStruct {
     CampaignFullDTO campaignToCampaignFullDTO(Campaign campaign);
     CampaignSlimDTO campaignToCampaignSlimDTO(Campaign campaign);
 
-    List<CampaignFullDTO> campaignsToCampaignsFullDTOs(
-            List<Campaign> campaigns
-    );
+    List<CampaignFullDTO> campaignsToCampaignsFullDTOs(List<Campaign> campaigns);
 
-    List<CampaignSlimDTO> campaignsToCampaignsSlimDTOs(
-            List<Campaign> campaigns
-    );
+    List<CampaignSlimDTO> campaignsToCampaignsSlimDTOs(List<Campaign> campaigns);
 
-    List<AdsDTO> adsToAdsDTOList(
-            List<Ads> ads
-    );
+    List<AdsDTO> adsToAdsDTOList(List<Ads> ads);
+
+    Ads adsDtoToAds(AdsDTO adsDTO);
 
 
 
